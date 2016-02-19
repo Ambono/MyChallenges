@@ -1,4 +1,20 @@
- static void maximumGap(int theNumber)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MaxMinNumbersInARange
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    }
+
+
+    public static void maximumGap(int theNumber)
     {
       string gap = Convert.ToString(theNumber, 2);
       string newGap = "";
@@ -28,3 +44,5 @@
       mylist.Reverse();
       Console.Write(mylist[0].ToString() + "  ");
     }
+  }
+}

@@ -1,0 +1,113 @@
+﻿Merge remote-tracking branch 'refs/remotes/origin/Origin'
+
+# Conflicts:
+#	README.md
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	new file:   .gitattributes
+#	new file:   .gitignore
+#	new file:   BinarySearch/App.config
+#	new file:   BinarySearch/BinarySearch.csproj
+#	new file:   BinarySearch/Program.cs
+#	new file:   BinarySearch/Properties/AssemblyInfo.cs
+#	new file:   CheckNumberIsInRange/App.config
+#	new file:   CheckNumberIsInRange/CheckNumberIsInRange.cs
+#	new file:   CheckNumberIsInRange/CheckNumberIsInRange.csproj
+#	new file:   CheckNumberIsInRange/Properties/AssemblyInfo.cs
+#	new file:   ConMaxBinaryGap/App.config
+#	new file:   ConMaxBinaryGap/MaxBinaryGap.cs
+#	new file:   ConMaxBinaryGap/MaxBinaryGap.csproj
+#	new file:   ConMaxBinaryGap/Properties/AssemblyInfo.cs
+#	new file:   Equilibrium/App.config
+#	new file:   Equilibrium/Equilibrium.cs
+#	new file:   Equilibrium/Equilibrium.csproj
+#	new file:   Equilibrium/Properties/AssemblyInfo.cs
+#	new file:   FactorialRecursive/App.config
+#	new file:   FactorialRecursive/FactorialRecursive.cs
+#	new file:   FactorialRecursive/FactorialRecursive.csproj
+#	new file:   FactorialRecursive/Properties/AssemblyInfo.cs
+#	new file:   FactorialWhileLoop/App.config
+#	new file:   FactorialWhileLoop/FactorialWhileLoop.cs
+#	new file:   FactorialWhileLoop/FactorialWhileLoop.csproj
+#	new file:   FactorialWhileLoop/Properties/AssemblyInfo.cs
+#	new file:   FeezBuzz/App.config
+#	new file:   FeezBuzz/FeezBuzz.csproj
+#	new file:   FeezBuzz/Program.cs
+#	new file:   FeezBuzz/Properties/AssemblyInfo.cs
+#	new file:   Fibonacci/App.config
+#	new file:   Fibonacci/Fibonacci.cs
+#	new file:   Fibonacci/Fibonacci.csproj
+#	new file:   Fibonacci/Properties/AssemblyInfo.cs
+#	new file:   LargerPerimeterInTriangle/App.config
+#	new file:   LargerPerimeterInTriangle/LargerPerimeterInTriangle.cs
+#	new file:   LargerPerimeterInTriangle/LargerPerimeterInTriangle.csproj
+#	new file:   LargerPerimeterInTriangle/Properties/AssemblyInfo.cs
+#	new file:   ListOfSquares/App.config
+#	new file:   ListOfSquares/ListOfSquares.cs
+#	new file:   ListOfSquares/ListOfSquares.csproj
+#	new file:   ListOfSquares/Properties/AssemblyInfo.cs
+#	new file:   MaxMinNumbersInARange/App.config
+#	new file:   MaxMinNumbersInARange/MaxMinNumbersInARange.csproj
+#	new file:   MaxMinNumbersInARange/Program.cs
+#	new file:   MaxMinNumbersInARange/Properties/AssemblyInfo.cs
+#	new file:   MyChallenges.sln
+#	new file:   MyChallenges/App.config
+#	new file:   MyChallenges/MyChallenges.csproj
+#	new file:   MyChallenges/Program.cs
+#	new file:   MyChallenges/Properties/AssemblyInfo.cs
+#	new file:   NumberOfUpperandLowerCases/App.config
+#	new file:   NumberOfUpperandLowerCases/NumberOfUpperAndLowerCases.cs
+#	new file:   NumberOfUpperandLowerCases/NumberOfUpperandLowerCases.csproj
+#	new file:   NumberOfUpperandLowerCases/Properties/AssemblyInfo.cs
+#	new file:   Palindrome/App.config
+#	new file:   Palindrome/Palindrome.cs
+#	new file:   Palindrome/Palindrome.csproj
+#	new file:   Palindrome/Properties/AssemblyInfo.cs
+#	new file:   Pangram/App.config
+#	new file:   Pangram/Pangram.cs
+#	new file:   Pangram/Pangram.csproj
+#	new file:   Pangram/Properties/AssemblyInfo.cs
+#	new file:   PascalTriangles/App.config
+#	new file:   PascalTriangles/PascalTriangle.cs
+#	new file:   PascalTriangles/PascalTriangles.csproj
+#	new file:   PascalTriangles/Properties/AssemblyInfo.cs
+#	new file:   PerfectNumbers/App.config
+#	new file:   PerfectNumbers/PerfectNumbers.cs
+#	new file:   PerfectNumbers/PerfectNumbers.csproj
+#	new file:   PerfectNumbers/Properties/AssemblyInfo.cs
+#	new file:   PrimeNumbersInARange/App.config
+#	new file:   PrimeNumbersInARange/PrimeNumbersInARange.csproj
+#	new file:   PrimeNumbersInARange/Program.cs
+#	new file:   PrimeNumbersInARange/Properties/AssemblyInfo.cs
+#	modified:   README.md
+#	new file:   StreamReaderWriter/App.config
+#	new file:   StreamReaderWriter/Program.cs
+#	new file:   StreamReaderWriter/Properties/AssemblyInfo.cs
+#	new file:   StreamReaderWriter/StreamReaderWriter.csproj
+#	new file:   StreamSerializer/App.config
+#	new file:   StreamSerializer/Program.cs
+#	new file:   StreamSerializer/Properties/AssemblyInfo.cs
+#	new file:   StreamSerializer/StreamSerializer.csproj
+#	new file:   XMLReaderWriter/App.config
+#	new file:   XMLReaderWriter/Program.cs
+#	new file:   XMLReaderWriter/Properties/AssemblyInfo.cs
+#	new file:   XMLReaderWriter/XMLReaderWriter.csproj
+#	new file:   XMLSerializer/App.config
+#	new file:   XMLSerializer/Program.cs
+#	new file:   XMLSerializer/Properties/AssemblyInfo.cs
+#	new file:   XMLSerializer/XMLSerializer.csproj
+#
+

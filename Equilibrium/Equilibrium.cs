@@ -16,29 +16,20 @@ namespace Equilibrium
 
     public static int solution(int[] A)
     {
-      // write your code in C# 6.0 with .NET 4.5 (Mono)
-      LinkedList<Object> L = new LinkedList<object>();
-      int[] B = new int[] { };
-      int val = L.Count;
-      int up = 0;
-      int down = 0;
-     
-      for (int i = 0; i < A.Length; ++i)
+      int Sumup = 0;
+      int Sumdown = 0;
+
+      for(int up = 0; up<A.Length; ++up)
       {
-
-        for (int x = A.Length - 1; x >= 0; --x)
+        for(int down = A.Length -1; down >=0 ;--down)
         {
-          up += A[i];
-          down += A[x];
-
-          if ((up == down))
+          Sumup +=A[up];
+          Sumdown += A[down];
+          if((down - up == 2) && Sumup == Sumdown)
           {
-
-            return i + 1;
+            return up + 1;
           }
-
         }
-
       }
 
       return -1;

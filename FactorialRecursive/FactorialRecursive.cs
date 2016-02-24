@@ -10,17 +10,16 @@ namespace FactorialRecursive
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("enter a number");
+      Console.Write("enter a number: ");
       int number = Convert.ToInt32(Console.ReadLine());
-      long factorial = CalculateFactorial(number);
-      Console.WriteLine("{0}Factorial of number is {1}", number, factorial);
+      long factorial = CalculateFactorialRecursive(number);
+      Console.WriteLine("Factorial of {0} is {1}", number, factorial);
       Console.ReadKey();
     }
-    private static long CalculateFactorial(int number)
+    private static long CalculateFactorialRecursive(int number)
     {
-      if (number == 1)
-        return 1;
-      return number *  CalculateFactorial  (number - 1);
+      return (number == 0) ? 1 : CalculateFactorialRecursive(number - 1) * number;
+    
     }
 
   }

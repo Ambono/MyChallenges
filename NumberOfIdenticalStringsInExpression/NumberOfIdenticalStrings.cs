@@ -14,23 +14,23 @@ namespace NumberOfIdenticalStringsInExpression
       FindNumberOfIdenticalStrings(myString);
     }
 
-static void FindNumberOfIdenticalStrings(string theString)
+    static void FindNumberOfIdenticalStrings(string theString)
     {
       string[] newString = theString.ToLower().Split();
       Array.Sort(newString);
       int count = 1;
-  for(int index = 0; index<newString.Length-1; ++index)
-  {
-    if(newString[index]==newString[index +1])
-    {
-      ++count;
-    }
-    else
-    {
-      Console.WriteLine("The count is {0}: {1} ", newString[index], count);
-      count = 1;
-    }
-  }
+      for (int index = 0; index < newString.Length - 1; ++index)
+      {
+        if (newString[index] == newString[index + 1])
+        {
+          ++count;
+        }
+        else
+        {
+          Console.WriteLine("The count is {0}: {1} ", newString[index], count);
+          count = 1;
+        }
+      }
     }
   }
 }

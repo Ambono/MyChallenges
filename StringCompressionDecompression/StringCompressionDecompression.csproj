@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49C080DC-90ED-4A9B-B97A-6CB61B74692D}</ProjectGuid>
+    <ProjectGuid>{3BF84AED-E9E5-4C44-9E2B-ADAC9ABC80E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SQLServerQueries</RootNamespace>
-    <AssemblyName>SQLServerQueries</AssemblyName>
+    <RootNamespace>StringCompressionDecompression</RootNamespace>
+    <AssemblyName>StringCompressionDecompression</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SQLQueries.cs" />
+    <Compile Include="StringCompression.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

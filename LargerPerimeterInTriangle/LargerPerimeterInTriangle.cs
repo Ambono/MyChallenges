@@ -37,11 +37,11 @@ namespace GeneralContainer
         }
 
       }
-      b.Sort();
-      if (b.Count > 0)
-        return b[0];
 
-      return -1;
+      var newb = from value in b
+                 orderby value
+                 select value;
+      return newb.Any() ? newb.First() : -1;     
     }
   }
 }

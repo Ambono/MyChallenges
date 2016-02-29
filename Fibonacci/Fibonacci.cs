@@ -11,7 +11,7 @@ namespace Fibonacci
     static void Main(string[] args)
     {
 
-      for (int i = 0; i < 10; ++i )
+      for (int i = 0; i < 10; ++i)
       {
         Console.WriteLine(CalculateFibonacci(i));
       }
@@ -21,13 +21,14 @@ namespace Fibonacci
     {
       int a = 0;
       int b = 1;
-      for (int x = 0; x < step; ++x )
+      int temp = 0;
+      for(int fibindex = 0; fibindex<step; ++fibindex)
       {
-        int temp = a;
+        temp = a;
         a = b;
-        b = temp + b;
+        b = b + temp;
       }
       return a;
-    }
+    }//end method
   }
 }

@@ -35,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamReaderWriter", "Strea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamSerializer", "StreamSerializer\StreamSerializer.csproj", "{624C8C3F-473F-436E-B526-D2DF3E0902B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLReaderWriter", "XMLReaderWriter\XMLReaderWriter.csproj", "{3293F8E9-287A-4215-AD68-452072939D8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLReader", "XMLReaderWriter\XMLReader.csproj", "{3293F8E9-287A-4215-AD68-452072939D8F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLSerializer", "XMLSerializer\XMLSerializer.csproj", "{6432461B-8349-40B5-AA0F-F74AB044D603}"
 EndProject
@@ -50,6 +50,20 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingLinq", "UsingLinq\UsingLinq.csproj", "{13DBC647-A014-4134-95D6-112AF65E0590}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberOfIdenticalStringsInExpression", "NumberOfIdenticalStringsInExpression\NumberOfIdenticalStringsInExpression.csproj", "{BF8F89D7-2BD4-4315-8540-C9BC4312A618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{1AFF5757-F268-4557-8794-896F4B5DD98F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Threads\Threads.csproj", "{D44D4616-268A-427D-85CA-62C42C2BB648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServerQueries", "SQLServerQueries\SQLServerQueries.csproj", "{49C080DC-90ED-4A9B-B97A-6CB61B74692D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingTriangles4types", "BuildingTriangles4types\BuildingTriangles4types.csproj", "{66B89C6F-699E-418A-8D3B-86004F58C7C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCompressionDecompression", "StringCompressionDecompression\StringCompressionDecompression.csproj", "{3BF84AED-E9E5-4C44-9E2B-ADAC9ABC80E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS", "AngularJS\AngularJS.csproj", "{D14F004B-872D-4874-884E-426CFCC39B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLWriter", "XMLWriter\XMLWriter.csproj", "{3A2D4519-F807-429A-A70F-DBF1C5D9644E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +167,34 @@ Global
 		{BF8F89D7-2BD4-4315-8540-C9BC4312A618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF8F89D7-2BD4-4315-8540-C9BC4312A618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF8F89D7-2BD4-4315-8540-C9BC4312A618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFF5757-F268-4557-8794-896F4B5DD98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFF5757-F268-4557-8794-896F4B5DD98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFF5757-F268-4557-8794-896F4B5DD98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFF5757-F268-4557-8794-896F4B5DD98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44D4616-268A-427D-85CA-62C42C2BB648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44D4616-268A-427D-85CA-62C42C2BB648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44D4616-268A-427D-85CA-62C42C2BB648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44D4616-268A-427D-85CA-62C42C2BB648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49C080DC-90ED-4A9B-B97A-6CB61B74692D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C080DC-90ED-4A9B-B97A-6CB61B74692D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C080DC-90ED-4A9B-B97A-6CB61B74692D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C080DC-90ED-4A9B-B97A-6CB61B74692D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B89C6F-699E-418A-8D3B-86004F58C7C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B89C6F-699E-418A-8D3B-86004F58C7C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B89C6F-699E-418A-8D3B-86004F58C7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B89C6F-699E-418A-8D3B-86004F58C7C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF84AED-E9E5-4C44-9E2B-ADAC9ABC80E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF84AED-E9E5-4C44-9E2B-ADAC9ABC80E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF84AED-E9E5-4C44-9E2B-ADAC9ABC80E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF84AED-E9E5-4C44-9E2B-ADAC9ABC80E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D14F004B-872D-4874-884E-426CFCC39B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14F004B-872D-4874-884E-426CFCC39B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14F004B-872D-4874-884E-426CFCC39B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14F004B-872D-4874-884E-426CFCC39B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A2D4519-F807-429A-A70F-DBF1C5D9644E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A2D4519-F807-429A-A70F-DBF1C5D9644E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A2D4519-F807-429A-A70F-DBF1C5D9644E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A2D4519-F807-429A-A70F-DBF1C5D9644E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

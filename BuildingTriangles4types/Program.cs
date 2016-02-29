@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XMLReaderWriter
+namespace BuildingTriangles4types
 {
   class Program
   {

@@ -16,11 +16,16 @@ namespace FactorialWhileLoop
 
     private static int calculatefactorial(int number)
     {
-      int i =1;
       int factorial = number;
-      while (number>1)
+      if (number == 0)
+      {
+        return 1;
+      }
+      
+      while(number > 1)
       {
         factorial *= --number;
+       
       }
       return factorial;
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SQLServerQueries
 {
-  class Program
+  class SQLQueries
   {
     static void Main(string[] args)
     {

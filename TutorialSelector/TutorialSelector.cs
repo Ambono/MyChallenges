@@ -42,7 +42,7 @@ namespace TutorialSelector
     XMLSERIALIZER,
     XMLWRITER
   }
-  class Program
+  class TutorialSelector
   {
     static void Main(string[] args)
     {

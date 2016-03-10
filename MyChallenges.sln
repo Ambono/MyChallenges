@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyChallenges", "MyChallenges\MyChallenges.csproj", "{58992560-3833-44E2-B4FB-CB6AC2C4B6D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equilibrium", "Equilibrium\Equilibrium.csproj", "{DB172B64-682D-45AB-94CF-11BF5D93CD2F}"
@@ -70,6 +68,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json", "Jason\Json.csproj", "{ED651937-9807-4597-8318-4C5089B486D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialSelector", "TutorialSelector\TutorialSelector.csproj", "{387BC72F-8521-435D-B18A-23B07FE1FB3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Javascript", "Javascript\Javascript.csproj", "{85BBE70E-8A7A-4672-B356-01D71CD5C963}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -213,6 +213,10 @@ Global
 		{387BC72F-8521-435D-B18A-23B07FE1FB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{387BC72F-8521-435D-B18A-23B07FE1FB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{387BC72F-8521-435D-B18A-23B07FE1FB3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85BBE70E-8A7A-4672-B356-01D71CD5C963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85BBE70E-8A7A-4672-B356-01D71CD5C963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85BBE70E-8A7A-4672-B356-01D71CD5C963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85BBE70E-8A7A-4672-B356-01D71CD5C963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

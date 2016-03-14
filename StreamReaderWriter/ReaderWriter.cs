@@ -7,36 +7,33 @@ using System.IO;
 
 namespace StreamReaderWriter
 {
-  class ReaderWriter
-  {
-    static void Main(string[] args)
+    class ReaderWriter
     {
-      ReadStream();
-    }
-
-    static void WriteStream()
-    {
-      using (StreamWriter writer = new StreamWriter(@"C:\OutputFiles\important.txt"))   
-      {
-        writer.Write("Word ");
-        writer.WriteLine("word 2");
-        writer.WriteLine("Line");
-      }
-    }
-
-    static void ReadStream()
-    {
-
-      using (StreamReader reader = new StreamReader(@"C:\OutputFiles\important.txt"))
-      {
-        string line;
-        while ((line = reader.ReadLine()) != null)
+        static void Main(string[] args)
         {
-          Console.WriteLine(line); // Write to console.
+            ReadStream();
+
         }
-      }
+        static void WriteStream()
+        {
+            using (StreamWriter sw = new StreamWriter(@"C:\OutputFiles\important.txt"))
+            {
+                sw.WriteLine("Hello");
+                sw.WriteLine("World");
+            }
+        }
+
+        static void ReadStream()
+        {
+            using (StreamReader sr = new StreamReader(@"C:\OutputFiles\important.txt"))
+            {
+                string line = "";
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+        }
 
     }
-
-  }
 }

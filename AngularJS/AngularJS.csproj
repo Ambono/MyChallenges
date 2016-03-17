@@ -48,9 +48,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NGTutorial3.html" />
     <Content Include="NGTutorial2.html" />
+    <Content Include="NGTutorial3.html" />
     <Content Include="NGTutorial1.html" />
+    <Content Include="NGTutorial4.html" />
+    <Content Include="NGTutorial5.html" />
+    <Content Include="NGTutoriel6.html" />
     <Content Include="Scripts\angular.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

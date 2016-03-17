@@ -10,27 +10,28 @@ namespace NumberOfUpperAndLowerCases
   {
     static void Main(string[] args)
     {
-      calculateNumberOfUpperAndLowerCases("The Quick Brown Fox Jumped Over The Lazy Sheeps");
+      calculateNumberOfUpperAndLowerCases("The Quick Brown Fox Jumped Over The Lazy Dogs");
     }
     private static void calculateNumberOfUpperAndLowerCases(String str)
     {
-      int lowercase = 0;
-      int uppercase = 0;
+        int lowercase = 0;
+        int uppercase = 0;
 
-      for (int caseTypecount = 0; caseTypecount < str.Length; ++caseTypecount)
-      {
-        if(char.IsLower(str[caseTypecount]))
+        for (int caseTypecount = 0; caseTypecount < str.Length; ++caseTypecount)
         {
-          ++lowercase;
+            if (char.IsLower(str[caseTypecount]))
+            {
+                ++lowercase;
+            }
+            else if (char.IsUpper(str[caseTypecount]))
+            {
+                ++uppercase;
+            }
         }
-        else if (char.IsUpper(str[caseTypecount]))
-        {
-          ++uppercase;
-        }
-      }
+        Console.WriteLine("{0, 5}  {1, 10}", "Lower", " Upper");
+        Console.WriteLine("{0, 5} {1, 10}", lowercase, uppercase);
+    }
 
-      Console.WriteLine("{0, 5}  {1, 10}", "Lower" ," Upper");
-      Console.WriteLine("{0, 5} {1, 10}", lowercase, uppercase);
-    } //end method
+    
   }
 }

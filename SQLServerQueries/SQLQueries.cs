@@ -30,7 +30,8 @@ The following SQL statement selects all the customers from the country "Mexico",
 SELECT * FROM Customers
 WHERE Country='Mexico';
   
-The following SQL statement selects all customers from the country "Germany" AND the city "Berlin", in the "Customers" table
+The following SQL statement selects all customers from the country "Germany" AND the city "Berlin", 
+       * in the "Customers" table
 SELECT * FROM Customers
 WHERE Country='Germany'
 AND City='Berlin';
@@ -52,7 +53,8 @@ INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Cou
 VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');
 
 
-The following SQL statement will insert a new row, but only insert data in the "CustomerName", "City", and "Country" columns (and the CustomerID field will of course also be updated automatically):
+The following SQL statement will insert a new row, but only insert data in the "CustomerName", "City", and "Country" columns
+       * (and the CustomerID field will of course also be updated automatically):
 INSERT INTO Customers (CustomerName, City, Country)
 VALUES ('Cardinal', 'Stavanger', 'Norway');
 
@@ -132,7 +134,8 @@ The following SQL statement selects all customers with a City starting with any 
 SELECT * FROM Customers
 WHERE City LIKE '_erlin';
    
-The following SQL statement selects all customers with a City starting with "L", followed by any character, followed by "n", followed by any character, followed by "on":
+The following SQL statement selects all customers with a City starting with "L", followed by any character, followed by "n",
+       * followed by any character, followed by "on":
 SELECT * FROM Customers
 WHERE City LIKE 'L_n_on';
   
@@ -163,7 +166,8 @@ SELECT * FROM Products
 WHERE Price BETWEEN 10 AND 20;
    
 
-The following SQL statement selects all products with a price BETWEEN 10 and 20, but products with a CategoryID of 1,2, or 3 should not be displayed:
+The following SQL statement selects all products with a price BETWEEN 10 and 20, but products with a CategoryID of 1,2, 
+       * or 3 should not be displayed:
  SELECT * FROM Products
 WHERE (Price BETWEEN 10 AND 20)
 AND NOT CategoryID IN (1,2,3);
@@ -381,7 +385,8 @@ O_Id int NOT NULL PRIMARY KEY,
 OrderNo int NOT NULL,
 P_Id int FOREIGN KEY REFERENCES Persons(P_Id)
 )
-To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
+To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, 
+       * use the following SQL syntax:
 
 MySQL / SQL Server / Oracle / MS Access:
 

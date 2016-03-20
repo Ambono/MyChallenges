@@ -60,11 +60,11 @@ namespace TutorialSelector
         using (StreamWriter writer = new StreamWriter(fs))
         {
           string line;
-          string newLine = "";
-          int limit = 2;
+          //string newLine = "";
+          Console.WriteLine("How many tutorials?");
+          int limit = Convert.ToInt32(Console.ReadLine());
           List<string> contentToRead = new List<string>();
           List<string> contentToOutput = new List<string>();
-
 
           if ((line = reader.ReadLine()) == null)
           {

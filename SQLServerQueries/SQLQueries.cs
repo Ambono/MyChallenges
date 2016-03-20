@@ -114,7 +114,9 @@ SELECT TOP 2 * FROM Customers;
 The following SQL statement selects the first 50% of the records from the "Customers" table:
 SELECT TOP 50 PERCENT * FROM Customers;
   
-The following SQL statement selects all customers with a City ending with the letter "s": 
+The following SQL statement selects all customers with a City ending with the letter "s":
+SELECT * FROM Customers
+WHERE City LIKE '%s';
 
 The following SQL statement selects all customers with a Country containing the pattern "land":
      SELECT * FROM Customers
@@ -217,6 +219,12 @@ INNER JOIN Orders
 ON Customers.CustomerID=Orders.CustomerID
 ORDER BY Customers.CustomerName;
    
+ double inner joins
+   SELECT * 
+FROM table1 INNER JOIN table2 ON 
+     table1.primaryKey=table2.table1Id INNER JOIN 
+     table3 ON table1.primaryKey=table3.table1Id
+         * 
 The following SQL statement will return all customers, and any orders they might have: 
 SELECT Customers.CustomerName, Orders.OrderID
 FROM Customers

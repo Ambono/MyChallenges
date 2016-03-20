@@ -14,7 +14,7 @@ namespace SQLServerQueries
 
     static void Queries()
     {
-      /**
+        /**
 The following SQL statement selects all the records in the "Customers" table
 SELECT * FROM Customers;
 
@@ -23,7 +23,7 @@ The following SQL statement selects the "CustomerName" and "City" columns from t
 SELECT CustomerName,City FROM Customers;
       
 The following SQL statement selects only the distinct values from the "City" columns from the "Customers" table
-  SELECT DISTINCT City FROM Customers;
+ SELECT DISTINCT City FROM Customers;
 
 The following SQL statement selects all the customers from the country "Mexico", in the "Customers" table
 
@@ -48,11 +48,12 @@ ORDER BY Country DESC;
 Assume we wish to insert a new row in the "Customers" table.
 
 We can use the following SQL statement:
-NSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
 VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');
 
 
-The following SQL statement will insert a new row, but only insert data in the "CustomerName", "City", and "Country" columns (and the CustomerID field will of course also be updated automatically):
+The following SQL statement will insert a new row, but only insert data in the "CustomerName", "City", 
+         * and "Country" columns (and the CustomerID field will of course also be updated automatically):
 INSERT INTO Customers (CustomerName, City, Country)
 VALUES ('Cardinal', 'Stavanger', 'Norway');
 
@@ -75,12 +76,12 @@ SQL injection
 The only proven way to protect a web site from SQL injection attacks, is to use SQL parameters.
 
 SQL parameters are values that are added to an SQL query at execution time, in a controlled manner.
-  txtUserId = getRequestString("UserId");
+ txtUserId = getRequestString("UserId");
 txtSQL = "SELECT * FROM Users WHERE UserId = @0";
 db.Execute(txtSQL,txtUserId);
   
-   another example
-     txtNam = getRequestString("CustomerName");
+  another example
+    txtNam = getRequestString("CustomerName");
 txtAdd = getRequestString("Address");
 txtCit = getRequestString("City");
 txtSQL = "INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)";
@@ -113,19 +114,17 @@ SELECT TOP 2 * FROM Customers;
 The following SQL statement selects the first 50% of the records from the "Customers" table:
 SELECT TOP 50 PERCENT * FROM Customers;
   
-The following SQL statement selects all customers with a City ending with the letter "s":
- The following SQL statement selects all customers with a City ending with the letter "s":
+The following SQL statement selects all customers with a City ending with the letter "s": 
 
 The following SQL statement selects all customers with a Country containing the pattern "land":
-      SELECT * FROM Customers
+     SELECT * FROM Customers
 WHERE Country LIKE '%land%';
     
 The following SQL statement selects all customers with Country NOT containing the pattern "land":
- SELECT * FROM Customers
+SELECT * FROM Customers
 WHERE Country NOT LIKE '%land%';
 
-
- The following SQL statement selects all customers with a City containing the pattern "es": 
+The following SQL statement selects all customers with a City containing the pattern "es": 
 SELECT * FROM Customers
 WHERE City LIKE '%es%';
   
@@ -134,7 +133,8 @@ The following SQL statement selects all customers with a City starting with any 
 SELECT * FROM Customers
 WHERE City LIKE '_erlin';
    
-The following SQL statement selects all customers with a City starting with "L", followed by any character, followed by "n", followed by any character, followed by "on":
+The following SQL statement selects all customers with a City starting with "L", followed by any character, followed by "n",
+         * followed by any character, followed by "on":
 SELECT * FROM Customers
 WHERE City LIKE 'L_n_on';
   
@@ -165,8 +165,9 @@ SELECT * FROM Products
 WHERE Price BETWEEN 10 AND 20;
    
 
-The following SQL statement selects all products with a price BETWEEN 10 and 20, but products with a CategoryID of 1,2, or 3 should not be displayed:
- SELECT * FROM Products
+The following SQL statement selects all products with a price BETWEEN 10 and 20, but products with a CategoryID of 1,2, 
+         * or 3 should not be displayed:
+SELECT * FROM Products
 WHERE (Price BETWEEN 10 AND 20)
 AND NOT CategoryID IN (1,2,3);
  
@@ -175,16 +176,20 @@ The following SQL statement selects all orders with an OrderDate BETWEEN '04-Jul
 SELECT * FROM Orders
 WHERE OrderDate BETWEEN #07/04/1996# AND #07/09/1996#;
     
-The following SQL statement specifies two aliases, one for the CustomerName column and one for the ContactName column. Tip: It requires double quotation marks or square brackets if the column name contains spaces:
+The following SQL statement specifies two aliases, one for the CustomerName column and one for the ContactName column. 
+      * Tip: It requires double quotation marks or square brackets if the column name contains spaces:
 SELECT CustomerName AS Customer, ContactName AS [Contact Person]
 FROM Customers; 
 
 
-In the following SQL statement we combine four columns (Address, City, PostalCode, and Country) and create an alias named "Address":
+In the following SQL statement we combine four columns (Address, City, PostalCode, and Country) and create an alias 
+      * named "Address":
 SELECT CustomerName, Address+', '+City+', '+PostalCode+', '+Country AS Address
 FROM Customers;
 
-The following SQL statement selects all the orders from the customer with CustomerID=4 (Around the Horn). We use the "Customers" and "Orders" tables, and give them the table aliases of "c" and "o" respectively (Here we have used aliases to make the SQL shorter):
+The following SQL statement selects all the orders from the customer with CustomerID=4 (Around the Horn).
+      * We use the "Customers" and "Orders" tables, and give them the table aliases of "c" and "o" respectively
+      * (Here we have used aliases to make the SQL shorter):
 SELECT o.OrderID, o.OrderDate, c.CustomerName
 FROM Customers AS c, Orders AS o
 WHERE c.CustomerName="Around the Horn" AND c.CustomerID=o.CustomerID;
@@ -196,10 +201,11 @@ RIGHT JOIN: Return all rows from the right table, and the matched rows from the 
 FULL JOIN: Return all rows when there is a match in ONE of the tables
 
 
-Notice that the "CustomerID" column in the "Orders" table refers to the "CustomerID" in the "Customers" table. The relationship between the two tables above is the "CustomerID" column.
+Notice that the "CustomerID" column in the "Orders" table refers to the "CustomerID" in the "Customers" table. 
+      * The relationship between the two tables above is the "CustomerID" column.
 
 Then, if we run the following SQL statement (that contains an INNER JOIN):
- SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
 FROM Orders
 INNER JOIN Customers
 ON Orders.CustomerID=Customers.CustomerID;
@@ -212,7 +218,7 @@ ON Customers.CustomerID=Orders.CustomerID
 ORDER BY Customers.CustomerName;
    
 The following SQL statement will return all customers, and any orders they might have: 
- SELECT Customers.CustomerName, Orders.OrderID
+SELECT Customers.CustomerName, Orders.OrderID
 FROM Customers
 LEFT JOIN Orders
 ON Customers.CustomerID=Orders.CustomerID
@@ -226,13 +232,15 @@ ON Customers.CustomerID=Orders.CustomerID
 ORDER BY Customers.CustomerName;
 
 
-The following SQL statement selects all the different cities (only distinct values) from the "Customers" and the "Suppliers" tables:
+The following SQL statement selects all the different cities (only distinct values) from the "Customers" and 
+      * the "Suppliers" tables:
 SELECT City FROM Customers
 UNION
 SELECT City FROM Suppliers
 ORDER BY City;
 
-The following SQL statement uses UNION ALL to select all (duplicate values also) German cities from the "Customers" and "Suppliers" tables:
+The following SQL statement uses UNION ALL to select all (duplicate values also) German cities from the "Customers" and
+      * "Suppliers" tables:
 SELECT City, Country FROM Customers
 WHERE Country='Germany'
 UNION ALL
@@ -244,24 +252,24 @@ Create a backup copy of Customers:
 SELECT *
 INTO CustomersBackup2013
 FROM Customers;
+       
 Use the IN clause to copy the table into another database:
-
 SELECT *
 INTO CustomersBackup2013 IN 'Backup.mdb'
 FROM Customers;
+       
 Copy only a few columns into the new table:
-
 SELECT CustomerName, ContactName
 INTO CustomersBackup2013
 FROM Customers;
+       
 Copy only the German customers into the new table:
-
 SELECT *
 INTO CustomersBackup2013
 FROM Customers
 WHERE Country='Germany';
+       
 Copy data from more than one table into the new table:
-
 SELECT Customers.CustomerName, Orders.OrderID
 INTO CustomersOrderBackup2013
 FROM Customers
@@ -271,6 +279,7 @@ ON Customers.CustomerID=Orders.CustomerID;
 Copy only a few columns from "Suppliers" into "Customers":
 INSERT INTO Customers (CustomerName, Country)
 SELECT SupplierName, Country FROM Suppliers;
+       
 Copy only the German suppliers into "Customers":
 INSERT INTO Customers (CustomerName, Country)
 SELECT SupplierName, Country FROM Suppliers
@@ -278,7 +287,6 @@ WHERE Country='Germany';
   
 
 The following SQL statement creates a database called "my_db":
-
 CREATE DATABASE my_db;
 
 
@@ -296,7 +304,8 @@ City varchar(255)
 
 NOT NULL - Indicates that a column cannot store NULL value
 UNIQUE - Ensures that each row for a column must have a unique value
-PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Ensures that a column (or combination of two or more columns) have a unique identity which helps to find a particular record in a table more easily and quickly
+PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Ensures that a column (or combination of two or more columns) 
+      * have a unique identity which helps to find a particular record in a table more easily and quickly
 FOREIGN KEY - Ensure the referential integrity of the data in one table to match values in another table
 CHECK - Ensures that the value in a column meets a specific condition
 DEFAULT - Specifies a default value for a column
@@ -313,7 +322,8 @@ Address varchar(255),
 City varchar(255)
 ) 
 
-To allow naming of a UNIQUE constraint, and for defining a UNIQUE constraint on multiple columns, use the following SQL syntax:
+To allow naming of a UNIQUE constraint, and for defining a UNIQUE constraint on multiple columns, 
+      * use the following SQL syntax:
 
 MySQL / SQL Server / Oracle / MS Access:
 
@@ -335,7 +345,8 @@ To create a PRIMARY KEY constraint on the "P_Id" column when the table is alread
 ALTER TABLE Persons
 ADD PRIMARY KEY (P_Id)
 
-To allow naming of a PRIMARY KEY constraint, and for defining a PRIMARY KEY constraint on multiple columns, use the following SQL syntax:
+To allow naming of a PRIMARY KEY constraint, and for defining a PRIMARY KEY constraint on multiple columns,
+      * use the following SQL syntax:
 
 MySQL / SQL Server / Oracle / MS Access:
 
@@ -373,7 +384,8 @@ O_Id int NOT NULL PRIMARY KEY,
 OrderNo int NOT NULL,
 P_Id int FOREIGN KEY REFERENCES Persons(P_Id)
 )
-To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
+To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, 
+         * use the following SQL syntax:
 
 MySQL / SQL Server / Oracle / MS Access:
 
@@ -394,7 +406,8 @@ MySQL / SQL Server / Oracle / MS Access:
 ALTER TABLE Orders
 ADD FOREIGN KEY (P_Id)
 REFERENCES Persons(P_Id)
-To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
+To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, 
+      * use the following SQL syntax:
 
 MySQL / SQL Server / Oracle / MS Access:
 
@@ -419,7 +432,8 @@ The SQL statement below creates an index named "PIndex" on the "LastName" column
 
 CREATE INDEX PIndex
 ON Persons (LastName)
-If you want to create an index on a combination of columns, you can list the column names within the parentheses, separated by commas:
+If you want to create an index on a combination of columns, you can list the column names within the parentheses, 
+      * separated by commas:
 
 CREATE INDEX PIndex
 ON Persons (LastName, FirstName)
@@ -444,7 +458,8 @@ DROP COLUMN DateOfBirth
     
 If you have the Northwind database you can see that it has several views installed by default.
 
-The view "Current Product List" lists all active products (products that are not discontinued) from the "Products" table. The view is created with the following SQL:
+The view "Current Product List" lists all active products (products that are not discontinued) from the "Products" table. 
+      * The view is created with the following SQL:
 
 CREATE VIEW [Current Product List] AS
 SELECT ProductID,ProductName
@@ -453,7 +468,8 @@ WHERE Discontinued=No
 We can query the view above as follows:
 
 SELECT * FROM [Current Product List]
-Another view in the Northwind sample database selects every product in the "Products" table with a unit price higher than the average unit price:
+Another view in the Northwind sample database selects every product in the "Products" table with a unit price higher 
+      * than the average unit price:
 
 CREATE VIEW [Products Above Average Price] AS
 SELECT ProductName,UnitPrice
@@ -462,7 +478,8 @@ WHERE UnitPrice>(SELECT AVG(UnitPrice) FROM Products)
 We can query the view above as follows:
 
 SELECT * FROM [Products Above Average Price]
-Another view in the Northwind database calculates the total sale for each category in 1997. Note that this view selects its data from another view called "Product Sales for 1997":
+Another view in the Northwind database calculates the total sale for each category in 1997. 
+      * Note that this view selects its data from another view called "Product Sales for 1997":
 
 CREATE VIEW [Category Sales For 1997] AS
 SELECT DISTINCT CategoryName,Sum(ProductSales) AS CategorySales
@@ -542,11 +559,14 @@ We can also use the GROUP BY statement on more than one column, like this:
 Example
 SELECT Shippers.ShipperName, Employees.LastName,
 COUNT(Orders.OrderID) AS NumberOfOrders
-FROM ((Orders
+FROM (
+           (Orders
 INNER JOIN Shippers
-ON Orders.ShipperID=Shippers.ShipperID)
+ON Orders.ShipperID=Shippers.ShipperID
+           )
 INNER JOIN Employees
-ON Orders.EmployeeID=Employees.EmployeeID)
+ON Orders.EmployeeID=Employees.EmployeeID
+    )
 GROUP BY ShipperName,LastName;
    
 
@@ -558,7 +578,8 @@ GROUP BY LastName
 HAVING COUNT(Orders.OrderID) > 25;
   
   
-The following SQL statement selects the "CustomerName" and "City" columns from the "Customers" table, and converts the "CustomerName" column to uppercase:
+The following SQL statement selects the "CustomerName" and "City" columns from the "Customers" table, 
+      * and converts the "CustomerName" column to uppercase:
 
 Example
 SELECT UCASE(CustomerName) AS Customer, City
@@ -573,7 +594,8 @@ Example
 SELECT MID(City,1,4) AS ShortCity
 FROM Customers;
 
-The following SQL statement selects the "CustomerName" and the length of the values in the "Address" column from the "Customers" table:
+The following SQL statement selects the "CustomerName" and the length of the values in the "Address" column from the 
+      * "Customers" table:
 
 Example
 SELECT CustomerName,LEN(Address) as LengthOfAddress
@@ -591,12 +613,13 @@ Example
 SELECT ProductName, Price, Now() AS PerDate
 FROM Products;
 
-The following SQL statement selects the product name, and price for today (formatted like YYYY-MM-DD) from the "Products" table:
+The following SQL statement selects the product name, and price for today (formatted like YYYY-MM-DD) from 
+      * the "Products" table:
 
 Example
 SELECT ProductName, Price, FORMAT(Now(),'YYYY-MM-DD') AS PerDate
 FROM Products;
-      **/
+     **/
     }
   }
 }

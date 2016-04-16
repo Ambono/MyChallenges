@@ -13,7 +13,7 @@ namespace Fibonacci
 
       for (int i = 0; i < 10; ++i)
       {
-        Console.WriteLine(CalculateFibonacci(i));
+        Console.Write(CalculateFibonacci(i)+" ");
       }
     }
 

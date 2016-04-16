@@ -20,8 +20,7 @@ namespace palindrome
       {
         newWord += palindrome[i];
       }
-
-      return palindrome == newWord;
+      return palindrome.Equals(newWord);
     }
   }
 }

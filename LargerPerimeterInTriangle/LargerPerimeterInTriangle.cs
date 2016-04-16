@@ -14,7 +14,11 @@ namespace GeneralContainer
       Console.WriteLine("{0}", findLargerPerimeter(C));
     }
        
-
+      /// <summary>
+      /// Given that a<p<q by requirement.
+      /// </summary>
+      /// <param name="A"></param>
+      /// <returns></returns>
     private static int findLargerPerimeter(int[] A)
     {
       List<int> b = new List<int>();

@@ -12,22 +12,23 @@ namespace ListOfSquares
     {
       Console.WriteLine("Enter number:");
       int limit = Convert.ToInt32(Console.ReadLine());
-      Console.WriteLine(listOfSquares(limit));
+      //Console.WriteLine(listOfSquares(limit));
+     listOfSquares(limit);
       Console.ReadKey();
     }
-    public static string listOfSquares(int limit)
+
+      /// <summary>
+      /// Calculates and didplays a list of the squares of number infrior to the number entered
+      /// </summary>
+      /// <param name="limit"></param>   
+   
+    public static void listOfSquares(int limit)
     {
-    List<int> l= new List<int>();
-    for (int i = 1; i < limit; ++i)
-    {
-      l.Add(i * i);
-    }
-       String listelement = "";
-    foreach (int numbers in l)
-    {
-      listelement +=numbers + " ";
-    }
-return listelement;
+        for (int i = 1; i < limit; ++i)
+        {
+            Console.WriteLine(i * i);
+            Console.WriteLine();
+        }
     }
 
   }

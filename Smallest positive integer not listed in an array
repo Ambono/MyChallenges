@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+int test(int A[]){
+ 
+ int y=0;
+        int [] sol = new int[2];
+         List<int> X= new List<int>();
+        Array.Sort(A);
+        if(A[0]<=0){
+            y=1; 
+        }
+       else{
+        for(int n=0; n<A.Length-1; ++n){
+            if(A[n+1]-A[n]>1)
+            {
+                X.Add(A[n]+1);
+            }
+        }
+        var desc =from s in X 
+                    orderby s
+                    select s;
+                    
+        y = desc.Any()?desc.First():A[A.Length-1]+1;
+       }
+        return y;
+		}
